@@ -11,14 +11,23 @@
         <section><h1>Hi, dear</h1></section>
     </header>
     <main>
-        <section>
-            {% for r in restaurants %}
+        <section class="section--main">
+            {% for r in rstr %}
                 <article>
-                    {{ r.name }}
-                    {{ r.rating }}
+                    <div class="section--main__article">
+                        {{ r.name }}
+                        {{ r.rating }}
+                    </div>
                 </article>
             {% endfor %}
         </section>
     </main>
+    <footer>
+        <section class="section--footer">
+            <div class="section--footer__info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque deserunt nesciunt distinctio laboriosam perferendis excepturi esse, ad ducimus deleniti labore tenetur vitae accusamus, illo totam saepe, recusandae consectetur. Placeat, temporibus.
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
