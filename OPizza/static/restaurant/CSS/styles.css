@@ -1,0 +1,12 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+
+.section--header {
+    background: linear-gradient(#ff7300f1, #e5350ef1);
+    color: #efeae9;
+    height: 75px;
+}

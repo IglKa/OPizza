@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="../static/restaurant/CSS/styles.css">
+
+    <title>OPizza! | MainPage</title>
 </head>
 <body>
     <header>
-        <section><h1>Hi, dear</h1></section>
+        <section class="section--header">
+            <h1>Hi, dear</h1>
+        </section>
     </header>
     <main>
         <section class="section--main">
             {% for r in rstr %}
                 <article>
                     <div class="section--main__article">
-                        {{ r.name }}
+                        {{ r.name }}<br>
                         {{ r.rating }}
                     </div>
                 </article>
+                <hr>
             {% endfor %}
         </section>
     </main>
