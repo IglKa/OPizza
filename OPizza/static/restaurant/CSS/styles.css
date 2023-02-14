@@ -17,10 +17,16 @@ main {
 
 .section--logos {
     position: absolute;
-    top: 0px;
-    left: 10px;
+    top: 10px;
+    left: 100px;
 }
 
+
+.section--search_bar{
+    position: absolute;
+    top: 10px;
+    left: 500px;
+}
 
 .section--buttons {
     position: absolute;
@@ -29,10 +35,10 @@ main {
 }
 
 .button {
-    width: 100px;
+    width: 150px;
     height: 25px;
     background-color: antiquewhite;
     border: solid 1px black;
     text-align: center;
-
+    font-size: 5;
 }
