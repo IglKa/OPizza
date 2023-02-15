@@ -1,6 +1,7 @@
-from .restaurant import RestaurantView
+from .restaurant import RestaurantListView, RestaurantDetailView
 
 
 __all__ = [
-    'RestaurantView',
+    'RestaurantListView',
+    'RestaurantDetailView',
 ]

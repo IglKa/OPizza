@@ -8,7 +8,8 @@ app_name = 'restaurant'
 
 urlpatterns = [
     # Restaurant views for site
-    path('', RestaurantView.as_view(), name='restr'),
+    path('', RestaurantListView.as_view(), name='restr'),
+    path('<int:pk>/', RestaurantDetailView.as_view(), name='restr-detail'),
 
     # API views
     path('api/v1/', RestaurantListAPIView.as_view()),
