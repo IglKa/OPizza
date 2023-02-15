@@ -4,61 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../static/restaurant/CSS/normalize.css" rel="stylesheet">
-    <link href="../static/restaurant/CSS/styles.css", rel="stylesheet">
-
+    {% block default_css %}
+        <link href="../static/restaurant/CSS/normalize.css" rel="stylesheet">
+        <link href="../static/restaurant/CSS/styles.css", rel="stylesheet">
+    {% endblock %}
+    
     <title>OPizza! | MainPage</title>
 </head>
 <body>
     {% block header %}
-    <header>
-        <section class="section--logos">
-            <h1>OPizza!</h1>
-        </section>
-        <section class="section--search_bar">
-            <div class="search_bar">
-                <input type="text">
-            </div>
-        </section>
-        <section class="section--additional">
-            About us | QA | About Dev team   
-        </section>
-        <section class="section--buttons">
-            <a href="#">
-                <button type="button" class="button">
-                    Log in
-                </button>
-            </a>
-        </section>
-    </header>
+        <header>
+            <section class="section--logos">
+                <h1>OPizza!</h1>
+            </section>
+            <section class="section--search_bar">
+                <div class="search_bar">
+                    <input type="text">
+                </div>
+            </section>
+            <section class="section--additional">
+                About us | QA | About Dev team   
+            </section>
+            <section class="section--buttons">
+                <a href="#">
+                    <button type="button" class="button">
+                        Log in
+                    </button>
+                </a>
+            </section>
+        </header>
     {% endblock %}
 
-    {% block content %}
+    
     <main>
-        <section class="section--main">
-            {% for r in rstr %}
-                <article>
-                    <div class="section--main__article">
-                        <a href="{% url 'restaurant:restr-detail' r.pk %}">
-                            {{ r.name }}<br>
-                            {{ r.rating }}
-                        </a>
-                    </div>
-                </article>
-                <hr>
-            {% endfor %}
-        </section>
+        {% block content %}
+            <section class="section--main">
+                {% for r in rstr %}
+                    <article>
+                        <div class="section--main__article">
+                            <a href="{% url 'restaurant:restr-detail' r.pk %}">
+                                {{ r.name }}<br>
+                                {{ r.rating }}
+                            </a>
+                        </div>
+                    </article>
+                    <hr>
+                {% endfor %}
+            </section>
+        {% endblock %}
     </main>
-    {% endblock %}
+    
 
     {% block footer %}
-    <footer>
-        <section class="section--footer">
-            <div class="section--footer__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque deserunt nesciunt distinctio laboriosam perferendis excepturi esse, ad ducimus deleniti labore tenetur vitae accusamus, illo totam saepe, recusandae consectetur. Placeat, temporibus.
-            </div>
-        </section>
-    </footer>
+        <footer>
+            <section class="section--footer">
+                <div class="section--footer__info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque deserunt nesciunt distinctio laboriosam perferendis excepturi esse, ad ducimus deleniti labore tenetur vitae accusamus, illo totam saepe, recusandae consectetur. Placeat, temporibus.
+                </div>
+            </section>
+        </footer>
     {% endblock %}
 
 </body>
