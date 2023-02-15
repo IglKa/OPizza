@@ -8,10 +8,11 @@
         <link href="../static/restaurant/CSS/normalize.css" rel="stylesheet">
         <link href="../static/restaurant/CSS/styles.css", rel="stylesheet">
     {% endblock %}
-    
+
     <title>OPizza! | MainPage</title>
 </head>
 <body>
+
     {% block header %}
         <header>
             <section class="section--logos">
@@ -34,12 +35,11 @@
             </section>
         </header>
     {% endblock %}
-
     
-    <main>
-        {% block content %}
+    {% block content %}
+        <main>
             <section class="section--main">
-                {% for r in rstr %}
+                {% for r in restaurants %}
                     <article>
                         <div class="section--main__article">
                             <a href="{% url 'restaurant:restr-detail' r.pk %}">
@@ -51,10 +51,9 @@
                     <hr>
                 {% endfor %}
             </section>
-        {% endblock %}
-    </main>
+        </main>
+    {% endblock %}
     
-
     {% block footer %}
         <footer>
             <section class="section--footer">
@@ -64,6 +63,6 @@
             </section>
         </footer>
     {% endblock %}
-
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

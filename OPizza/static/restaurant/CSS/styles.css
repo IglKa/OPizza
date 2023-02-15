@@ -37,6 +37,7 @@ main {
     right: 100px;
 }
 
+
 .section--additional{
     font-size: 25px;
     position: absolute;
@@ -54,8 +55,16 @@ main {
     font-size: 18px;
 }
 
+
 input {
     width: 500px;
     height: 25px;
     font-size: large;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
