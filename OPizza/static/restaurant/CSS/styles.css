@@ -1,9 +1,11 @@
 body {
-    background-color: wheat;
+    background-color: azure;
 }
 
 
 header {
+    position: fixed;
+    z-index: 1;
     color: #efeae9;
     border: solid 2px black;
     width: 100%;
@@ -15,13 +17,13 @@ header {
 
 main {
     position: relative;
-    top: 70px;
+    top: 75px;
     margin: 0px;
 }
 
 
 .section--logos {
-    position: absolute;
+    position: relative;
     font-size: 30px;
     top: 25px;
     left: 100px;
@@ -29,34 +31,16 @@ main {
 
 
 .section--search_bar {
-    position: absolute;
-    top: 25px;
+    position: relative;
+    top: -10px;
     left: 300px;
 }
 
 
-.section--buttons {
-    position: absolute;
-    top: 25px;
-    right: 100px;
-}
-
-
 .section--additional{
+    position: relative;
     font-size: 25px;
-    position: absolute;
-    top: 20px;
     right: 500px;
-}
-
-
-.button {
-    width: 150px;
-    height: 25px;
-    background-color: antiquewhite;
-    border: solid 1px black;
-    text-align: center;
-    font-size: 18px;
 }
 
 
@@ -67,8 +51,30 @@ input {
 }
 
 
+.section--main__article {
+    position: relative;
+    top: 10px;
+    left: 500px;
+    width: 800px;
+    height: 500px;
+    border-radius: 9px;
+    border: solid 2px black;
+}
+
+
+section--main__article__info {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    font-size: 25px;
+}
+
+
 footer {
     position: absolute;
     bottom: 0;
     left: 0;
 }
+
+
+

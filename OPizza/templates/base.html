@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     {% block css %}
-        <link href="restaurant/CSS/normalize.css" rel="stylesheet">
-        <link href="restaurant/CSS/styles.css", rel="stylesheet">
+        <link href="{% static 'restaurant/CSS/normalize.css' %}" rel="stylesheet">
+        <link href="{% static 'restaurant/CSS/styles.css' %}", rel="stylesheet">
     {% endblock %}
     <title>OPizza! | MainPage</title>
 </head>
@@ -26,13 +26,6 @@
             <section class="section--additional">
                 About us | QA | About Dev team   
             </section>
-            <section class="section--buttons">
-                <a href="#">
-                    <button type="button" class="button">
-                        Log in
-                    </button>
-                </a>
-            </section>
         {% endblock %}
     </header>
     
@@ -42,10 +35,13 @@
                 {% for r in restaurants %}
                     <article>
                         <div class="section--main__article">
-                            <a href="{% url 'restaurant:restr-detail' r.pk %}">
+                            <div class="section--main__article__image">
+                                {{ r.image }}
+                            </div>
+                            <div class="sections--main__article__info">
                                 {{ r.name }}<br>
                                 {{ r.rating }}
-                            </a>
+                            </div>
                         </div>
                     </article>
                     <hr>
