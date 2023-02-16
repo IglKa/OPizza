@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% block default_css %}
-        <link href="../static/restaurant/CSS/normalize.css" rel="stylesheet">
-        <link href="../static/restaurant/CSS/styles.css", rel="stylesheet">
+    {% load static %}
+    {% block css %}
+        <link href="restaurant/CSS/normalize.css" rel="stylesheet">
+        <link href="restaurant/CSS/styles.css", rel="stylesheet">
     {% endblock %}
-
     <title>OPizza! | MainPage</title>
 </head>
 <body>
 
-    {% block header %}
-        <header>
+    <header>
+        {% block header %}
             <section class="section--logos">
                 <h1>OPizza!</h1>
             </section>
@@ -33,11 +33,11 @@
                     </button>
                 </a>
             </section>
-        </header>
-    {% endblock %}
+        {% endblock %}
+    </header>
     
-    {% block content %}
-        <main>
+    <main>
+        {% block content %}
             <section class="section--main">
                 {% for r in restaurants %}
                     <article>
@@ -51,18 +51,18 @@
                     <hr>
                 {% endfor %}
             </section>
-        </main>
-    {% endblock %}
-    
-    {% block footer %}
-        <footer>
+        {% endblock %}
+    </main>
+        
+    <footer>
+        {% block footer %}
             <section class="section--footer">
                 <div class="section--footer__info">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque deserunt nesciunt distinctio laboriosam perferendis excepturi esse, ad ducimus deleniti labore tenetur vitae accusamus, illo totam saepe, recusandae consectetur. Placeat, temporibus.
                 </div>
             </section>
-        </footer>
-    {% endblock %}
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        {% endblock %}
+    </footer>
+    
 </body>
 </html>
