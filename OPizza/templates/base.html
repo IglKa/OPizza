@@ -16,15 +16,18 @@
     <header>
         {% block header %}
             <section class="section--logos">
-                <h1>OPizza!</h1>
+                <a href="{% url 'restaurant:restr' %}">
+                    <img class="pizza-icon" src="{% static 'restaurant/images/pizza.png' %}">
+                    <span>OPizza!</span>
+                </a>
             </section>
-            <section class="section--search_bar">
-                <div class="search_bar">
-                    <input type="text">
-                </div>
+            <section class="section--search-bar">
+                
             </section>
             <section class="section--additional">
-                About us | QA | About Dev team   
+                <a class="section--additional__a" href="#">About us</a>
+                <a class="section--additional__a" href="#">Doc</a>
+                <a class="section--additional__a" href="#">Menu</a>  
             </section>
         {% endblock %}
     </header>
